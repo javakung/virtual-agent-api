@@ -15,5 +15,9 @@ async def test():
 async def add(a: int = 0, b: int = 0):
     return a+b
 
+@app.get("/mul")
+async def mul(a: int = 0, b: int = 0):
+    return a*b
+
 if __name__ == '__main__':
    uvicorn.run(app, host="0.0.0.0", port=80, debug=True) 
