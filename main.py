@@ -12,7 +12,7 @@ async def test():
     return 'Test Tutorial'
 
 @app.get("/add")
-async def add(a: int = 0, limit: b = 0):
+async def add(a: int = 0, b: int = 0):
     return a+b
 
 if __name__ == '__main__':
