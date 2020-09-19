@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import uvicorn
 
 app = FastAPI()
 
@@ -6,7 +7,9 @@ app = FastAPI()
 async def main():
     return 'Deploy Model Tutorial'
 
+@app.get("/test")
+async def test():
+    return 'Test Tutorial'
 
 if __name__ == '__main__':
-   import uvicorn
    uvicorn.run(app, host="0.0.0.0", port=80, debug=True) 
